@@ -1,0 +1,62 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the page-->
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+        <h1>Add Your Team</h1>
+        <form class="form" method="post">
+            
+            <div class="form-group">
+                <label for="">Name of Team</label>
+                <input type="text" class="form-control"
+                id="nameTextField"
+                placeholder="Enter The name of Team"
+                name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="">League Class</label>
+                <input type="text" class="form-control"
+                id="AuthorTextField"
+                placeholder="Enter Your Leauge Class A, B or C"
+                name="author" required>
+            </div>
+
+            <div class="form-group">
+                <label for="">Season Entering</label>
+                <input type="text" class="form-control"
+                id="publishedTextField"
+                placeholder="Enter the Season your Applying (fall, or summer)"
+                name="published" required>
+            </div>
+
+            <div class="form-group">
+                <label for="">Members of the Team</label>
+                <textarea type="text" class="form-control"
+                id="DescriptionTextField"
+                placeholder="Enter All first and Last names of team players seperated by commas."
+                name="description" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="">Number of players</label>
+                <input type="number" class="form-control"
+                id="priceTextField"
+                placeholder="Enter the amount of players."
+                name="price" required>
+            </div>
+            <button class="btn-btn-primary" type="submit">
+                <i class= "fas fa-edit"></i>submit</button>
+
+            <a href="/book-list" class="btn btn-warning">
+                <i class="fas fa-undo"></i>Cancel</a>
+        </form>
+    </div>
+</div>
+</div>
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

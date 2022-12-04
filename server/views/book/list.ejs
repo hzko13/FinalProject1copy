@@ -1,0 +1,47 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+<!-- Main Content -->
+<main class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-10">
+            <h1> Current Resgistered Teams </h1> 
+            <a href="/book-list/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Enter Your Team!</a>
+                <br>
+            <br>
+    <table class= "table table-boarded table-striped table-hover">
+    <tr class ="d-flex"> 
+        <th class="text-center col-2">Name of Team </th>
+        <th class="text-center col-2">League Class</th>
+        <th class="text-center col-1">Season Entering</th>
+        <th class="text-center col-5">Members of the Team</th>
+        <th class="text-center col-1">Number of players</th>
+        <th class="text-center col-1"></th>
+        <th class="text-center col-1"></th>
+    </tr>
+    <!-- repeat the template-->
+    <% for(let count=0; count < Booklist.length; count++) { %>
+        <tr class ="d-flex"> 
+            <td class="text-center col-2"><%= Booklist[count].name %></td>
+            <td class="text-center col-2"><%= Booklist[count].author %></td>
+            <td class="text-center col-1"><%= Booklist[count].published %></td>
+            <td class="text-center col-5"><%= Booklist[count].description %></td>
+            <td class="text-center col-1"><%= Booklist[count].price %></td>
+            <td class="text-center col-1">
+                <a href="/book-list/edit/<%= Booklist[count]._id %>"
+                    class= "btn btn-primary">
+                    <i class ="fas fa-pencil-alt"></i> Edit </a>
+            </td>
+            <td class="text-center col-1">
+                <a href = "/book-list/delete/<%= Booklist[count]._id %>"
+                class= "btn btn-danger">
+                <i class ="fas fa-trash-alt"></i> Delete </a>
+            </td>
+        </tr>
+    <% } %>
+    </table>
+    </div>
+    </div>
+</main>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

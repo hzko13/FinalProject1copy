@@ -1,0 +1,45 @@
+<%- include header.ejs %>
+<%- include main_nav.ejs %>
+<!-- Main Content -->
+<main>
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"> Weekly Schedule</h1>
+    <br>
+    <br>
+
+    <title>Weekly Schedule</title>  
+ 
+    <div class="row">
+        <div class="col-md-offset-3 col-md-10">
+            <h1><%= title %> </h1> 
+            
+    <table class= "table table-boarded table-striped table-hover">
+    <tr class ="d-flex"> 
+        <th class="text-center col-2">Monday </th>
+        <th class="text-center col-2">Tuesday</th>
+        <th class="text-center col-2">Wednesday</th>
+        <th class="text-center col-2">Thursday</th>
+        <th class="text-center col-2">Friday</th>
+        <th class="text-center col-2">Saturday</th>
+        <th class="text-center col-2">Sunday</th>
+    </tr>
+    <!-- repeat the template-->
+        <tr class ="d-flex"> 
+            <td class="text-center col-2">d</td>
+            <td class="text-center col-2">d</td>
+            <td class="text-center col-2">f</td>
+            <td class="text-center col-2">d</td>
+            <td class="text-center col-2">h</td>
+            <td class="text-center col-2">h</td>
+            <td class="text-center col-2">h</td>
+
+        </tr>
+    </table>
+    </div>
+    </div>
+  </div>
+</div>
+</main>
+<%- include bottom_nav.ejs %>
+<%- include footer.ejs %>
