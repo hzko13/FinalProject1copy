@@ -23,4 +23,15 @@ router.get('/services', indexController.displayServicesPage)
 router.get('/contact', indexController.displayContactPage)
 
 
+router.get('/login', indexController.displayLoginPage)
+//post router for login page
+router.post('/login', indexController.processLoginPage)
+
+
+router.get('/register', indexController.displayRegisterPage)
+//post router for register page
+router.post('/register', indexController.processRegisterPage)
+
+router.get('/logout', indexController.performLogout);
 module.exports = router;
+
