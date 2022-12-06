@@ -10,6 +10,7 @@ let passportLocal = require('passport-local');
 let localStrategy = passportLocal.Strategy;
 let flash = require('connect-flash');
 let app = express();
+
 // creata a user model instance
 let userModel = require('../models/user');
 let user = userModel.User;
@@ -21,11 +22,10 @@ let DB = require('./db');
 // point mongoose to DB URI 
 
 mongoose.connect(DB.URI);
-let mongDB = mongoose.connection;
-mongDB.on('error',console.error.bind(console,'Connection Error:'));
-mongDB.once('open', ()=> {
-  console.log('connected to the MongoDB');
-})
+let mongoDB = mongoose.connection;
+mongoDB.on('error', (e) => console.log(`Ran into an unhandled error: ${e}`));
+mongoDB.once('open', ()=> {
+  console.log('connected to the MongoDB');})
 
 // set-up Express session
 app.use(session({
@@ -48,9 +48,9 @@ app.use(flash());
 
 
 
-let indexRouter = require('../routes/index');
-let usersRouter = require('../routes/users');
-let booksRouter = require('../routes/book');
+const indexRouter = require('../routes/index');
+const usersRouter = require('../routes/users');
+const booksRouter = require('../routes/book');
 
 
 // view engine setup

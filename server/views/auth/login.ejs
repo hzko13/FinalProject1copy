@@ -1,9 +1,9 @@
 <%- include ../partials/header.ejs %>
-<%- include ../partials/main_nav.ejs %>
+<%- include('../partials/main_nav.ejs', { title: title }); %>
 
 <main class="container">
     <!--MessageArea-->
-    <% if (message/length > 0) { %>
+    <% if (message.length > 0) { %>
         <div class="alert alter-danger">
             <%= message %>
         </div>
