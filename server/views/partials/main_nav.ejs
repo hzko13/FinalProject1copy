@@ -1,51 +1,15 @@
-<!--NavBar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/"><i class="fa-solid fa-futbol">  OCSL - Oshawa's Children Soccer League</i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto"> 
+<nav>
+    <div class="logoSection">
+        <img src="/assets/images/ball.png" alt="soccer ball" />
+        <p class="logoText">OCSL</p>
+    </div>
 
-        <li class="nav-item">
-        <% if (title == "Home") { %>
-          <a class="nav-link active" href="/home">
-        <% } else { %>
-          <a class="nav-link" href="/home">
-        <% } %>
-          <i class="fa-solid fa-lg fa-house-user"> Home</i></a>
-        </li>
-
-        <li class="nav-item">
-        <% if (title == "Books") { %>
-          <a class="nav-link active" href="/book-list">
-        <% } else { %>
-          <a class="nav-link" href="/book-list">
-        <% } %>
-        <i class="fa-solid fa-square-plus"> Registration</i></a>
-        </li>
-
-        <li class="nav-item">
-        <% if (title == "About") { %>
-          <a class="nav-link active" href="/about">
-        <% } else { %>
-          <a class="nav-link" href="/about">
-        <% } %>
-          <i class="fa-sharp fa-solid fa-circle-info"> Scheduling</i>
-           </a>
-        </li>        
-
-
-        <li class="nav-item">
-        <% if (title == "Contact us") { %>
-          <a class="nav-link active" href="/contact">
-        <% } else { %>
-          <a class="nav-link" href="/contact">
-        <% } %>
-          <i class="fa-solid fa-phone"> Contact Us</i></a>
-        </li>
+    <div class="navLinks">
+        <a href="/about">About</a>
+        <a href="/schedule">Schedule</a>
+        <a class="registerBtn" href="/register">
+            Register
+        </a>
 
     </div>
-  </div>
 </nav>

@@ -11,6 +11,9 @@ module.exports.displayAboutPage = (req,res)=> {
 module.exports.displayProductsPage = (req,res)=> {
     res.render('index', { title: 'Products'
     });}
+module.exports.displayProductsPage = (req,res)=> {
+    res.render('partials/schedule', { title: 'Schedule'
+    });}
 
 module.exports.displayServicesPage = (req,res)=> {
     res.render('partials/new', { title: 'Services'
@@ -19,6 +22,7 @@ module.exports.displayServicesPage = (req,res)=> {
 module.exports.displayContactPage = (req,res)=> {
     res.render('partials/Contact', { title: 'Contact'
     });}
+    
 
 module.exports.displayLoginPage = (req,res)=> {
     if (!req.user)
