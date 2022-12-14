@@ -22,7 +22,7 @@ router.get('/services', indexController.displayServicesPage)
 /* GET contact page. */
 router.get('/contact', indexController.displayContactPage)
 
-/* GET contact page. */
+/* GET schedule page. */
 router.get('/schedule', indexController.displaySchedulePage)
 
 
