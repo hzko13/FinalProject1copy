@@ -78,7 +78,7 @@
  }
  
  /**
-  * Event listener for HTTP server "listening" event.
+  *  Event listener for HTTP server "listening" event
   */
  
  function onListening() {
