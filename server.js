@@ -41,7 +41,7 @@
      return val;
    }
  
-   if (port >= ) {
+   if (port >= 0) {
      // port number
      return port;
    }
