@@ -1,45 +1,32 @@
 <%- include header.ejs %>
-<%- include('../partials/main_nav.ejs', { title: title }); %>
+<%- include('../partials/main_nav.ejs'); %>
+
 <!-- Main Content -->
-<main>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4"> Weekly Schedule</h1>
-    <br>
-    <br>
+<main class="page">
+    <h1 class="pageTitle">
+        About
+    </h1>
 
-    <title>Weekly Schedule</title>  
- 
-    <div class="row">
-        <div class="col-md-offset-3 col-md-10">
-            <h1><%= title %> </h1> 
-            
-    <table class= "table table-boarded table-striped table-hover">
-    <tr class ="d-flex"> 
-        <th class="text-center col-2">Monday </th>
-        <th class="text-center col-2">Tuesday</th>
-        <th class="text-center col-2">Wednesday</th>
-        <th class="text-center col-2">Thursday</th>
-        <th class="text-center col-2">Friday</th>
-        <th class="text-center col-2">Saturday</th>
-        <th class="text-center col-2">Sunday</th>
-    </tr>
-    <!-- repeat the template-->
-        <tr class ="d-flex"> 
-            <td class="text-center col-2">d</td>
-            <td class="text-center col-2">d</td>
-            <td class="text-center col-2">f</td>
-            <td class="text-center col-2">d</td>
-            <td class="text-center col-2">h</td>
-            <td class="text-center col-2">h</td>
-            <td class="text-center col-2">h</td>
+    <p class="aboutText">
+        OCSL was founded in 2022. As a member of the league you must adhere to the safety protocols set in place. Any violence, racism, or harrasment will not be tolerated. Players may be fined and/or penalized for such behaviour. As a community we must all respect one another and compete fairly.
+    </p>
 
-        </tr>
-    </table>
-    </div>
-    </div>
-  </div>
-</div>
-</main>
-<%- include bottom_nav.ejs %>
-<%- include footer.ejs %>
+    <div class="dividerLine" style="margin-top: 40px; margin-bottom: 40px; width: 80vw;"></div>
+
+
+    <h1 class="pageTitle">
+        Pricing
+    </h1>
+
+    <p class="aboutText">
+        One time fee of $500 is required per player.
+        <br>        <br>
+
+        This covers the jerseys, transportation, coaching, and all other equipment.
+        <br>        <br>
+
+
+        Payments can be made by cheque or via phone call during office hours.    </p>
+
+    <div class="dividerLine" style="margin-top: 40px; margin-bottom: 40px; width: 80vw;"></div>
+

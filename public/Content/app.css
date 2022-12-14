@@ -206,3 +206,9 @@ nav .navLinks .registerBtn {
     height: 1px;
     background: #323031;
 }
+.aboutText {
+    margin-top: 40px;
+    width: 60vw;
+    text-align: center;
+    font-size: 1.7em;
+}
