@@ -6,7 +6,7 @@ let Book = require('../models/book');
 const book = require('../models/book');
 /*CRUD */
 
-module.exports.displayBookList = (req,res,next)=>{
+module.exports.displayBookList = (req,res)=>{
     Book.find((err,booklist)=>{
         if (err)
         {
@@ -22,11 +22,10 @@ module.exports.displayBookList = (req,res,next)=>{
     });
 };
 
-module.exports.displayAddPage = (req,res,next)=>{
-    res.render('book/add',{title:'Add Book'})
-};
+module.exports.displayAddPage = (req,res)=>{
+    res.render('book/add',{title:'Add Book'})};
 
-module.exports.processAddpage = (req,res,next)=>{
+module.exports.processAddpage = (req,res)=>{
     let newBook = Book ({
         "name":req.body.name,
         "author":req.body.author,
@@ -47,7 +46,7 @@ module.exports.processAddpage = (req,res,next)=>{
     })
 };
 
-module.exports.displayEditPage = (req,res,next)=>{
+module.exports.displayEditPage = (req,res)=>{
     let id = req.params.id;
     Book.findById(id,(err,bookToEdit) =>{
         if (err)
@@ -57,12 +56,12 @@ module.exports.displayEditPage = (req,res,next)=>{
         }
         else
         {
-            res.render('book/edit',{title:'Edit Book', book:bookToEdit});
+            res.render('book/edit',{title:'Edit Book', book: bookToEdit});
         }
     })
 };
 
-module.exports.processEditPage = (req,res,next)=>{
+module.exports.processEditPage = (req,res)=>{
     let id=req.params.id;
     let updateBook = Book({
         "_id":id,
@@ -85,7 +84,7 @@ module.exports.processEditPage = (req,res,next)=>{
     });
 };
 
-module.exports.performDelete = (req,res,next)=>{
+module.exports.performDelete = (req,res)=>{
     let id=req.params.id;
     Book.deleteOne({_id:id},(err) =>{
         if (err)

@@ -22,6 +22,9 @@ router.get('/services', indexController.displayServicesPage)
 /* GET contact page. */
 router.get('/contact', indexController.displayContactPage)
 
+/* GET schedule page. */
+router.get('/schedule', indexController.displaySchedulePage)
+
 
 router.get('/login', indexController.displayLoginPage)
 //post router for login page
