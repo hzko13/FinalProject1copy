@@ -41,7 +41,7 @@
      return val;
    }
  
-   if (port >= 0) {
+   if (port >= ) {
      // port number
      return port;
    }
@@ -78,7 +78,7 @@
  }
  
  /**
-  * Event listener for HTTP server "listening" event.
+  *  Event listener for HTTP server "listening" event
   */
  
  function onListening() {
